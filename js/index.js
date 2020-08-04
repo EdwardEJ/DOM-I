@@ -76,3 +76,50 @@ firstSectionImg.setAttribute('src', siteContent['cta']['img-src']);
 
 /************* MAIN CONTENT ********************/
 
+const firsth4 = document.querySelector('.text-content:nth-of-type(1) h4');
+const secondh4 = document.querySelector('.text-content:nth-of-type(2) h4');
+const firstP = document.querySelector('.text-content:nth-of-type(1) p');
+const secondP = document.querySelector('.text-content:nth-of-type(2) p');
+const middleImg = document.querySelector('#middle-img');
+
+firsth4.textContent = siteContent['main-content']['features-h4'];
+firstP.textContent = siteContent['main-content']['features-content'];
+
+secondh4.textContent = siteContent['main-content']['about-h4'];
+secondP.textContent = siteContent['main-content']['about-content'];
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+/************ BOTTOM CONTENT ********************/
+
+const firstBottomH4 = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+const secondBottomH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+const thirdBottomH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+
+const firstBottomP = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
+const secondBottomP = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
+const thirdBottomP = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+
+firstBottomH4.textContent = siteContent['main-content']['services-h4'];
+secondBottomH4.textContent = siteContent['main-content']['product-h4'];
+thirdBottomH4.textContent = siteContent['main-content']['vision-h4'];
+
+firstBottomP.textContent = siteContent['main-content']['services-content'];
+secondBottomP.textContent = siteContent['main-content']['services-content'];
+thirdBottomP.textContent = siteContent['main-content']['services-content'];
+
+/************ CONTACT CONTENT  ********************/
+
+const contactH4 = document.querySelector('.contact h4');
+const contactFirstP = document.querySelector('.contact p:nth-of-type(1)');
+const contactSecondP = document.querySelector('.contact p:nth-of-type(2)');
+const contactThirdP = document.querySelector('.contact p:nth-of-type(3)');
+
+contactH4.textContent = siteContent['contact']['contact-h4'];
+contactFirstP.textContent = siteContent['contact']['address'];
+contactSecondP.textContent = siteContent['contact']['phone'];
+contactThirdP.textContent = siteContent['contact']['email'];
+
+/************* FOOTER *****************************/
+
+const footerP = document.querySelector('footer p');
+footerP.textContent = siteContent['footer']['copyright'];
