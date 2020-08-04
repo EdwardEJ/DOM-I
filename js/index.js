@@ -42,15 +42,35 @@ let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 /*************** NAV BAR  *****************/
+let navBar = document.querySelectorAll('nav a');
 
-const navBar = document.querySelector('nav');
 
-const firstNavLink = navBar.querySelector('a:nth-of-type(1)');
-const secondNavLink = navBar.querySelector('a:nth-of-type(2)');
-const thirdNavLink = navBar.querySelector('a:nth-of-type(3)');
-const fourthNavLink = navBar.querySelector('a:nth-of-type(4)');
-const fifthNavLink = navBar.querySelector('a:nth-of-type(5)');
-const sixthNavLink = navBar.querySelector('a:nth-of-type(6)');
+const blogLink = document.createElement('a');
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+
+const homePage = document.createElement('a');
+homePage.textContent = 'Home';
+homePage.href = '#';
+
+
+const nav = document.querySelector('nav');
+
+nav.appendChild(blogLink);
+nav.prepend(homePage);
+
+console.log(navBar);
+
+const firstNavLink = navBar[0];
+const secondNavLink = navBar[1];
+const thirdNavLink = navBar[2];
+const fourthNavLink = navBar[3];
+const fifthNavLink = navBar[4];
+const sixthNavLink = navBar[5];
+
+navBar = document.querySelectorAll('nav a');
+console.log(navBar);
+
 
 firstNavLink.textContent = siteContent['nav']['nav-item-1'];
 secondNavLink.textContent = siteContent['nav']['nav-item-2'];
@@ -58,6 +78,13 @@ thirdNavLink.textContent = siteContent['nav']['nav-item-3'];
 fourthNavLink.textContent = siteContent['nav']['nav-item-4'];
 fifthNavLink.textContent = siteContent['nav']['nav-item-5'];
 sixthNavLink.textContent = siteContent['nav']['nav-item-6'];
+
+
+
+Array.from(navBar).forEach(item => {
+  item.style.color = 'green';
+});
+
 
 /*************** CTA SECTION  *****************/
 
